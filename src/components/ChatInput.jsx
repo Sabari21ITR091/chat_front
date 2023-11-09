@@ -5,7 +5,7 @@ import { IoMdSend } from "react-icons/io";
 import { IoAddSharp } from "react-icons/io5";
 import styled from "styled-components";
 import Picker from "emoji-picker-react";
-import { HfInference } from '@huggingface/inference'
+//import { HfInference } from '@huggingface/inference'
 
 export default function ChatInput({ handleSendMsg, loader, setLoader }) {
   const [msg, setMsg] = useState("");
@@ -61,15 +61,15 @@ export default function ChatInput({ handleSendMsg, loader, setLoader }) {
   }
 
   async function stablediff(data) {
-    const TOKEN = "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";
-    const hf = new HfInference(TOKEN);
-    const blob = await hf.textToImage({
-      inputs: data,
-      model: "stabilityai/stable-diffusion-xl-base-1.0",
-    });
-    let dataUrl = await blobToDataUrl(blob);
-    console.log(dataUrl)
-    return dataUrl;
+    // const TOKEN = "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";
+    // const hf = new HfInference(TOKEN);
+    // const blob = await hf.textToImage({
+    //   inputs: data,
+    //   model: "stabilityai/stable-diffusion-xl-base-1.0",
+    // });
+    // let dataUrl = await blobToDataUrl(blob);
+    // console.log(dataUrl)
+    // return dataUrl;
   }
 
 
